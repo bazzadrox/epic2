@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+
+	<form id="form" action="C:/Users/zeusd/OneDrive/Área%20de%20Trabalho/index3.html">
+		Put the attacker code: 
+		<input type="text" name="code"><br>
+		<input type="hidden" name="extLoginState" id=test><br>
+		<input type="button" onclick="myFunction()" value="Submit">
+	</form>
+
+	<script>
+		function myFunction() {
+			document.getElementById("form").submit();
+
+		}
+
+		const urlParams = new URLSearchParams(window.location.search);
+		const myParam = urlParams.get('extLoginState');
+
+		
+		// Define the string
+		var string = myParam;
+		document.getElementById("test").value=string;
+
+	</script>
+</body>
+</html>
